@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class CommentLog(
-    val packets: List<Packet>
+    val packet: List<Packet>
 ) {
     @Serializable
     data class Packet(
