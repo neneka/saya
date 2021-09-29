@@ -56,7 +56,7 @@ class TimeshiftNicoliveCommentProvider(
 
     private suspend fun fetchCommentsInRangeOf(startAt: Long, endAt: Long, offset: Int): List<Comment> {
         return NicoJkApi.getComments("jk${channel.nicojkId}", startAt, endAt)
-            .packets
+            .packet
             .asSequence()
             .filter { it.chat.deleted == 0 }
             .map { it.chat }
